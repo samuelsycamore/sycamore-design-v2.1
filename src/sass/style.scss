@@ -283,7 +283,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 47.5%);
     gap: 5%;
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 800px) {
       grid-template-columns: repeat(1, 100%);
       gap: 1rem;
     }
@@ -294,18 +294,25 @@ header {
       border-radius: 5px;
       margin-bottom: 2rem;
       text-align: center;
+      img {
+        margin-bottom: 1.8rem;
+      }
       .card-title {
         font-size: 3rem;
-        margin-bottom: 2rem;
-        @media screen and (max-width: 720px) {
-          font-size: 2rem;
-          
+        line-height: 1em;
+        margin-bottom: 4rem;
+        @media screen and (max-width: 800px) {
+          font-size: 4rem;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 3rem;
         }
       }
       p {
         text-align: left;
+        margin-bottom: 1rem;
       }
-      @media screen and (max-width: 720px) {
+      @media screen and (max-width: 60px) {
         padding: 2rem 1.5rem;
       }
     }
