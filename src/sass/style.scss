@@ -8,6 +8,17 @@ $light: #fff;
 $secondary: #c0c0c0;
 $dark: #000;
 
+@mixin theme-grid() {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  gap: 5%;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(1, 100%);
+    gap: 1rem;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +58,25 @@ h6 {
 
 a {
   text-decoration: none;
+  position: relative;
+  color: $light;
+}
+a:hover {
+  color: $color-2;
+  transition: all 0.3s ease-in-out;
+}
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-2;
+  transition: all 0.3s ease-in-out;
+}
+a:hover::before {
+  width: 100%;
 }
 
 .btn {
@@ -188,7 +218,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 5%;
 
     .col {
       &.content {
@@ -237,6 +267,7 @@ header {
       &.animation {
         overflow-x: hidden;
         z-index: 49;
+        max-width: 550px;
         @media screen and (max-width: 1111px) {
           position: absolute;
           top: 0;
@@ -252,7 +283,8 @@ header {
   }
 }
 
-.content {
+.services {
+  margin-bottom: 200px;
   .row {
     margin-bottom: 50px;
     .col {
@@ -279,14 +311,7 @@ header {
     }
   }
   .grid {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 47.5%);
-    gap: 5%;
-    @media screen and (max-width: 800px) {
-      grid-template-columns: repeat(1, 100%);
-      gap: 1rem;
-    }
+    @include theme-grid;
     .services-card {
       background: $color-3;
       min-width: 320px;
@@ -324,11 +349,86 @@ header {
   }
 }
 
+.contact {
+  min-height: 100vh;
+  margin-bottom: 200px;
+  .row {
+    .col {
+      .desc {
+        text-transform: uppercase;
+        color: $color-2;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .title {
+        display: block;
+        color: $light;
+        font-size: 9rem;
+        line-height: 1.1em;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+        @media screen and (max-width: 900px) {
+          font-size: 8rem;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 6.2rem;
+        }
+      }
+    }
+  }
+  .row.grid {
+    @include theme-grid;
+    align-items: center;
+    .col {
+      a {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: thin;
+        font-style: italic;
+        margin-bottom: 2.5rem;
+        @media screen and (max-width: 660px) {
+          font-size: 2.2rem;
+        }
+      }
+      p {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
 img {
   width: 50px;
 }
 
 .newsletter {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   background: rgb(55, 48, 163);
   background: linear-gradient(33deg, #4b134f 0%, #c94b4b 100%);
+  .row {
+    .col {
+      .desc {
+        text-transform: uppercase;
+        color: $color-1;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .title {
+        display: block;
+        color: $light;
+        font-size: 5.5rem;
+        line-height: 1.1em;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+        @media screen and (max-width: 1200px) {
+          font-size: 8rem;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 6.2rem;
+        }
+      }
+    }
+  }
 }
