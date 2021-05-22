@@ -1,6 +1,6 @@
 {
-  "name": "11ty-sass-skeleton",
-  "version": "1.2.0",
+  "name": "sycamore-design",
+  "version": "2.1.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -12,12 +12,6 @@
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
-  },
-  "author": "5t3ph",
-  "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
     "autoprefixer": "^9.8.6",

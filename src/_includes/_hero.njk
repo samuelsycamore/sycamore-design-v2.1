@@ -1,66 +1,29 @@
-<section class="hero w-full h-full min-h-screen px-5 text-white">
-  <div class="row mx-auto flex w-full h-full items-end md:items-center justify-between pb-10 max-w-7xl">
-    <div class="col-left flex flex-col p-5 max-w-2xl z-40">
-      <h2 class="headline italic text-5xl sm:text-5xl md:text-6xl xl:text-7xl">
-        First impressions<br />
-        <span class="font-extrabold not-italic">mean everything</span>
-      </h2>
-      <p
-        class="
-          font-thin
-          text-yellow-300 text-2xl
-          sm:text-3xl
-          md:text-4xl
-          py-4
-        "
-      >
-        What does your web presence say about your business?
-      </p>
-      <p class="italic text-base sm:text-lg md:text-xl pb-4">
-        → We help agencies and startups convert new clients to enthusiastic
-        supporters.
-      </p>
-      <div class="mt-2">
-        <button
-          class="
-            w-full
-            max-w-xs
-            border-2 border-indigo-800
-            shadow-md
-            bg-black
-            text-white
-            uppercase
-            tracking-wider
-            text-lg
-            font-light
-            rounded-md
-            py-3
-            px-8
-            hover:bg-indigo-800
-            transition
-            duration-500
-            ease-in-out
-          "
-        >
-          <a href="#contact">Let's Talk</a>
-        </button>
-
+<section class="hero">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col content">
+        <h2 class="headline mono">
+          First impressions<br />
+          <span>mean everything</span>
+        </h2>
+        <p class="subheadline">What does your web presence say about your business?</p>
+        <p class="callout">
+          → We help agencies and startups convert new clients to enthusiastic
+          supporters.
+        </p>
+        <div>
+            <a class="btn" href="#contact">Let's Talk</a>
+        </div>
       </div>
-    </div>
-    <div class="col-right absolute top-10 left-0 opacity-20 lg:relative lg:max-w-xl lg:overflow-hidden lg:opacity-100 lg:self-center lg:-mt-20">
-      <lottie-player
-        src="../img/laptopdude.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay
-      ></lottie-player>
+      <div class="col animation">
+        <lottie-player
+          src="../img/laptopdude.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
     </div>
   </div>
 </section>
-
-<!--<script type="text/javascript">
-  gsap.from(".hero", {duration: 1.5, opacity: 0, scale: 3});
-  // gsap.from(".col-left", {duration: 4, y: 1000, x: -500, ease: "elastic.out(1, 0.8)", scale: 0.1});
-  //gsap.from(".col-right", {duration: 4, y: 1000, x: 500, ease: "elastic.out(1, 0.6)", scale: 0.1});
-</script> -->
