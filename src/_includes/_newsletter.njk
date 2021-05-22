@@ -1,0 +1,82 @@
+<section
+  class="
+    newsletter
+    h-screen
+    w-full
+    text-left
+    mx-auto
+    bg-indigo-800
+    px-5
+    py-10
+    md:py-20
+    text-white
+  "
+>
+  <div class="max-w-7xl p-5 mx-auto flex flex-col h-full justify-center">
+    <div class="text-left">
+      <h5 class="text-gray-400 uppercase tracking-wider text-sm font-bold">
+        Email Newsletter
+      </h5>
+      <h4 class="uppercase text-4xl md:text-5xl font-bold my-6">
+        Don't miss the forest for the trees.
+      </h4>
+    </div>
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/samuelsycamore"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.email/samuelsycamore', 'popupwindow')"
+      class="embeddable-buttondown-form"
+    >
+      <label for="bd-email" class="text-gray-300"
+        >Sign up for the Sycamore Design newsletter and join our scrappy
+        collective of web developers, designers, writers, and freelancers.
+        <br />I'll deliver a carefully curated batch of exciting new tech stuff
+        a few times a month.</label
+      ><br />
+
+      <input
+        placeholder="enter your email"
+        class="
+          w-full
+          max-w-xl
+          rounded-md
+          text-indigo-800
+          px-3
+          py-2
+          mt-8
+          mb-4
+          sm:mb-6
+        "
+        type="email"
+        name="email"
+        id="bd-email"
+      />
+      <input type="hidden" value="1" name="embed" />
+      <input
+        class="
+          w-full
+          max-w-sm
+          sm:w-72
+          border-2 border-indigo-800
+          shadow-md
+          bg-black
+          text-white
+          uppercase
+          tracking-wider
+          text-lg
+          font-light
+          rounded-md
+          py-3
+          px-8
+          hover:bg-indigo-700
+          transition
+          duration-500
+          ease-in-out
+        "
+        type="submit"
+        value="Sign Up"
+      />
+    </form>
+  </div>
+</section>

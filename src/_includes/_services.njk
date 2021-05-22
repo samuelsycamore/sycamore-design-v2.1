@@ -1,0 +1,60 @@
+{% macro card(img, title, content) %}
+<div class="bg-purple bg-pink px-5 py-10 mb-10 md:m-0 rounded-md transition duration-500 transform hover:-translate-y-3 hover:scale-105 text-gray-400 hover:text-white">
+  <img class="h-10 w-10 mx-auto my-2" src="../img/icons/{{ img }}" />
+  <h4 class="text-3xl text-center text-white tracking-tighter font-bold py-4">
+    {{ title }}
+  </h4>
+  <p class="text-left py-4 md:px-4">{{ content }}</p>
+</div>
+{% endmacro %}
+
+<section class="services min-h-screen pt-32 pb-20 px-10 mx-auto max-w-7xl flex flex-col justify-center" id="services">
+  <div class="mb-10 md:mt-20">
+    <h5 class="text-indigo-600 uppercase tracking-wider text-sm font-bold">
+      What We Offer
+    </h5>
+    <h3
+      class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl italic pt-4 pb-12 leading-tight"
+    >
+      <span class="font-extrabold not-italic tracking-tighter"
+        >Sycamore Design</span
+      >
+      provides
+    </h3>
+  </div>
+  <div class="md:grid md:grid-cols-2 gap-10">
+    {{
+      card(
+        "upload.svg",
+        "Full-service development",
+        "We specialize in beautiful, lightning-fast websites that are optimized for all devices. From concept to completion, we are your one-stop shop for upgrading your web presence and generating more leads."
+      )
+    }}
+
+    {{
+      card(
+        "paper.svg",
+        "Technical writing",
+        "Beginner-friendly software docs are the best possible advocate for your product. We take an empathy-driven approach to software documentation and tutorials in order to convert new users into enthusiastic fans."
+      )
+    }}
+
+    {{
+      card(
+        "speaker.svg",
+        "Marketing and copywriting",
+        "Your website has mere seconds to convince a new visitor to stick around. Does your site make the best first impression possible? We captivate your audience by centering their satisfaction in everything we create."
+      )
+    }}
+
+    {{
+      card(
+        "click.svg",
+        "Search engine optimization",
+        "SEO doesn't have to feel like sorcery. We aim to demystify the process of keyword research and technical SEO for our clients. Need to go deeper? Ask us about content-driven SEO."
+      )
+    }}
+
+    
+  </div>
+</section>
