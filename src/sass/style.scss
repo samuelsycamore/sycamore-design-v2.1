@@ -411,22 +411,25 @@ img {
     .col {
       .desc {
         text-transform: uppercase;
-        color: $color-1;
+        color: $secondary;
         font-size: 2rem;
         margin-bottom: 1rem;
       }
       .title {
         display: block;
         color: $light;
-        font-size: 5.5rem;
+        font-size: 9rem;
         line-height: 1.1em;
         font-weight: 600;
         margin-bottom: 2.5rem;
-        @media screen and (max-width: 1200px) {
-          font-size: 8rem;
+        @media screen and (max-width: 1080px) {
+          font-size: 7rem;
         }
-        @media screen and (max-width: 400px) {
-          font-size: 6.2rem;
+        @media screen and (max-width: 830px) {
+          font-size: 5rem;
+        }
+        @media screen and (max-width: 630px) {
+          font-size: 4rem;
         }
       }
     }
