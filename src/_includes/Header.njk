@@ -1,0 +1,43 @@
+<header>
+  <div class="component-wrapper">
+    <div class="row">
+      <div class="col">
+        <a>
+          <img
+            width="120px"
+            height="100%"
+            alt="Bloom Co"
+            class="logo cursor-pointer"
+          />
+        </a>
+      </div>
+      <div class="col">
+        <img src="../img/icons/menu-white.svg" class="hamburger" />
+        <nav>
+          <ul>
+            <li>
+              <a onClick="{pageTransition}">About us</a>
+            </li>
+            <li>
+              <a onClick="{pageTransition}"></a>
+            </li>
+            <li>
+              <a onClick="{pageTransition}">Portfolio</a>
+            </li>
+            <li>
+              <a onClick="{pageTransition}">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("click", () => {
+    event.preventDefault();
+    document.querySelector(".hamburger").classList.toggle("is-active");
+    document.querySelector("nav").classList.toggle("is-active");
+  });
+</script>
