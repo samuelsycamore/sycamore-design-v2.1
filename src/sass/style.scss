@@ -24,6 +24,9 @@ $dark: #000;
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 
 html {
   font-size: 62.5%;
@@ -56,29 +59,6 @@ h6 {
   color: $light;
 }
 
-a {
-  text-decoration: none;
-  position: relative;
-  color: $light;
-}
-a:hover {
-  color: $color-2;
-  transition: all 0.3s ease-in-out;
-}
-a::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: $color-2;
-  transition: all 0.3s ease-in-out;
-}
-a:hover::before {
-  width: 100%;
-}
-
 .btn {
   text-transform: uppercase;
   display: inline-block;
@@ -109,7 +89,7 @@ ul {
 
 header {
   position: fixed;
-  top: 0;
+  top: 2%;
   left: 0;
   width: 100%;
   z-index: 9999;
@@ -142,60 +122,78 @@ header {
     align-items: center;
   }
   a {
-    color: #fff;
+    text-decoration: none;
+    position: relative;
+    color: $light;
     @media screen and (max-width: 680px) {
       font-size: 1.25em;
       color: #fff;
     }
   }
-  .hamburger {
-    display: none;
-    @media screen and (max-width: 680px) {
-      position: relative;
-      display: flex;
-      padding: 10px 5px;
-      z-index: 10;
-    }
-    &.is-active {
-      .hamburger-inner,
-      .hamburger-inner::before,
-      .hamburger-inner::after {
-        background-color: #fff;
-      }
-    }
+  a:hover {
+    color: $color-2;
+    transition: all 0.3s ease-in-out;
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-2;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover::before {
+    width: 100%;
+  }
+}
+.hamburger {
+  display: none;
+  @media screen and (max-width: 680px) {
+    position: relative;
+    display: flex;
+    padding: 10px 5px;
+    z-index: 10;
+  }
+  &.is-active {
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
       background-color: #fff;
     }
   }
-  nav {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #fff;
+  }
+}
+nav {
+  @media screen and (max-width: 680px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 90px;
+    background: #000;
+    transform: translateX(100%);
+    transition: 300ms all ease-in-out;
+  }
+  &.is-active {
+    transform: translateX(0);
+  }
+  ul {
+    display: flex;
+    gap: 40px;
     @media screen and (max-width: 680px) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      max-width: 320px;
-      height: 100vh;
-      padding: 20px;
-      padding-top: 90px;
-      background: #000;
-      transform: translateX(100%);
-      transition: 300ms all ease-in-out;
-    }
-    &.is-active {
-      transform: translateX(0);
-    }
-    ul {
-      display: flex;
-      gap: 40px;
-      @media screen and (max-width: 680px) {
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
   }
 }
-
 
 .hero {
   background: #000;
@@ -401,6 +399,7 @@ img {
   background: linear-gradient(33deg, #4b134f 0%, #c94b4b 100%);
   .row {
     .col {
+      margin-bottom: 2rem;
       .desc {
         text-transform: uppercase;
         color: $secondary;
@@ -424,6 +423,31 @@ img {
           font-size: 4rem;
         }
       }
+      &.form {
+        input {
+          font-size: inherit;
+          margin-right: 0.8rem;
+        }
+        input.email {
+          width: 100%;
+          max-width: 500px;
+          background: $dark;
+          color: $color-1;
+          padding: 1.5rem;
+          border: 1px solid $color-1;
+          border-radius: 5px;
+        }
+        input.email:focus {
+          background: $color-4;
+          color: $light;
+          transform: scale(102%);
+          transition: 300ms ease-in-out;
+        }
+      }
     }
   }
+}
+
+footer {
+  padding: 4rem 0;
 }
