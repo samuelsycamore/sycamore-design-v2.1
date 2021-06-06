@@ -92,7 +92,7 @@ header {
   top: 2%;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 50;
   &:before {
     content: "";
     position: absolute;
@@ -103,19 +103,7 @@ header {
     background: transparent;
     transition: 400ms all ease-in-out;
   }
-  &.header-fixed {
-    &.white {
-      &:before {
-        background: #000;
-      }
-    }
-  }
-  &.black {
-    background: #fff;
-    a {
-      color: #000;
-    }
-  }
+  
   .row {
     display: flex;
     justify-content: space-between;
@@ -154,7 +142,7 @@ header {
     position: relative;
     display: flex;
     padding: 10px 5px;
-    z-index: 10;
+    z-index: 50;
   }
   &.is-active {
     .hamburger-inner,
@@ -188,9 +176,15 @@ nav {
   }
   ul {
     display: flex;
-    gap: 40px;
+    li {
+      margin-left: 40px;
+    }
     @media screen and (max-width: 680px) {
       flex-direction: column;
+      li {
+        margin-bottom: 40px;
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -208,11 +202,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5%;
+    row-gap: 5%;
 
     .col {
       &.content {
-        z-index: 50;
+        z-index: 49;
         max-width: 800px;
         margin-top: 70px;
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
